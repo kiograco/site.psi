@@ -15,7 +15,7 @@ const quotes = [
     author: 'Clínica do encontro',
   },
   {
-    text: 'Na terapia, o sofrimento não precisa ser enfrentado em solidão: ele pode ser olhado com cuidado e linguagem.',
+    text: 'Na terapia, o sofrimento não precisa ser enfrentado em solidão: ele pode ser olhado com o cuidado que cada história precisa.',
     author: 'Processo terapêutico',
   },
 ];
@@ -124,7 +124,7 @@ function App() {
         <section className="section intro">
           <div className="section-heading">
             <p className="eyebrow">Sobre o atendimento</p>
-            <h2>Um processo terapêutico construído com presença, diálogo e respeito à singularidade.</h2>
+            <h2>Um processo psicoterapêutico construído com presença, diálogo e respeito à singularidade.</h2>
           </div>
 
           <div className="cards three-columns">
@@ -153,11 +153,6 @@ function App() {
         </section>
 
         <section className="section carousel-section">
-          <div className="section-heading narrow">
-            <p className="eyebrow">Palavras que acompanham a escuta</p>
-            <h2>Citações conectadas ao estilo de abordagem fenomenológico-existencial.</h2>
-          </div>
-
           <div className="carousel-card">
             <p className="quote-mark">“</p>
             <p className="quote-text">{quotes[activeQuote].text}</p>
