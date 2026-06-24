@@ -532,3 +532,24 @@ h2 {
     max-width: 100%;
   }
 }
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.brand-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-block .eyebrow {
+  margin: 0 0 4px;
+}
+
+.brand-block .brand {
+  display: block;
+}

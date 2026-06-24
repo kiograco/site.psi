@@ -76,10 +76,18 @@ function App() {
     <div className="page-shell">
       <header className="hero">
         <nav className="topbar">
-          <div>
-            <p className="eyebrow">Psicóloga Clínica</p>
-            <strong className="brand">Andreia Lucynara</strong>
-          </div>
+        <div className="brand-block">
+  <img
+    src="/logo.png"
+    alt="Logo Andreia Lucynara"
+    className="brand-logo"
+  />
+
+  <div>
+    <p className="eyebrow">Psicóloga Clínica</p>
+    <strong className="brand">Andreia Lucynara</strong>
+  </div>
+</div>
           <a className="ghost-button" href={googleReviewsUrl} target="_blank" rel="noreferrer">
             Ver avaliações
           </a>
