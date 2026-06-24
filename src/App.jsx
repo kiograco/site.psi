@@ -85,7 +85,7 @@ function App() {
 
   <div>
     <p className="eyebrow">Psicóloga Clínica</p>
-    <strong className="brand">Andreia Lucynara</strong>
+    <strong className="brand">Andréia Lucynara</strong>
   </div>
 </div>
           <a className="ghost-button" href={googleReviewsUrl} target="_blank" rel="noreferrer">
@@ -98,7 +98,7 @@ function App() {
             <span className="badge">CRP 17/3551</span>
             <h1>Um espaço de escuta, presença e cuidado para a sua experiência.</h1>
             <p className="lead">
-              Andreia Lucynara oferece atendimento psicológico online e presencial com base na
+              Andréia oferece atendimento psicológico online e presencial com base na
               fenomenologia existencial, acolhendo cada história com profundidade, sensibilidade e
               ética.
             </p>
@@ -123,7 +123,7 @@ function App() {
               />
             </div>
             <div className="profile-note">
-              <p className="note-title">Online e presencial</p>
+              <p className="note-title">Sobre mim</p>
               <p>A psicologia clínica faz parte do meu percurso profissional há cerca de 10 anos. Nesse período, muitas histórias foram acolhidas, desvelando possibilidades diversas de transformação, cuidado, autoconhecimento e abertura para autenticidade.</p>
               <p>O espaço psicoterapêutico produz sentido ao meu trabalho. Me sinto honrada em acompanhar o percurso tão singular das pessoas que me procuram.</p> 
               <p>Faço atendimento online, em língua portuguesa, para pessoas de qualquer lugar do mundo.</p>

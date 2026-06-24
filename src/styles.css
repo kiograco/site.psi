@@ -2,16 +2,17 @@
   color-scheme: light;
   --bg: #f3fbf2;
   --bg-soft: #e3f1e1;
-  --surface: rgba(243, 251, 242, 0.84);
-  --surface-strong: #f3fbf2;
-  --text: #1a3b1a;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: #ffffff;
+  --text: #163816;
   --muted: #3d5f3d;
-  --line: rgba(26, 59, 26, 0.15);
-  --primary: #b71c1c;
-  --primary-strong: #8a1414;
-  --accent: #1a3b1a;
+  --line: rgba(26, 59, 26, 0.12);
+  --primary: #305441;
+  --primary-strong: #213d2f;
+  --accent: #8a1414;
   --accent-soft: #e3f1e1;
   --shadow: 0 24px 60px rgba(26, 59, 26, 0.12);
+  --shadow-hover: 0 30px 70px rgba(26, 59, 26, 0.18);
 }
 
 * {
@@ -27,11 +28,10 @@ body {
   min-width: 320px;
   font-family: 'Manrope', sans-serif;
   color: var(--text);
-background:
-  radial-gradient(circle at top left, rgba(26, 59, 26, 0.20), transparent 30%),
-  radial-gradient(circle at 85% 10%, rgba(183, 28, 28, 0.15), transparent 22%),
-  radial-gradient(circle at 50% 100%, rgba(26, 59, 26, 0.12), transparent 28%),
-  linear-gradient(180deg, #f7fef6 0%, var(--bg) 52%, #e6f2e5 100%);
+  background:
+    radial-gradient(circle at top left, rgba(26, 59, 26, 0.14), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(138, 20, 20, 0.08), transparent 20%),
+    linear-gradient(90deg, #edf2ed 0%, #f5f2ee 48%, #f8f5f1 100%);
 }
 
 a {
@@ -60,7 +60,10 @@ button {
 }
 
 .hero {
-  padding: 18px 0 40px;
+  min-height: calc(100vh - 40px);
+  padding: 18px 0 48px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero::before,
@@ -69,7 +72,7 @@ button {
   position: absolute;
   border-radius: 999px;
   pointer-events: none;
-  filter: blur(6px);
+  filter: blur(10px);
 }
 
 .hero::before {
@@ -77,7 +80,7 @@ button {
   right: 6%;
   width: 180px;
   height: 180px;
-  background: radial-gradient(circle, rgba(159, 175, 146, 0.28), transparent 68%);
+  background: radial-gradient(circle, rgba(48, 84, 65, 0.16), transparent 68%);
 }
 
 .hero::after {
@@ -85,7 +88,7 @@ button {
   bottom: 40px;
   width: 220px;
   height: 220px;
-  background: radial-gradient(circle, rgba(215, 194, 172, 0.32), transparent 70%);
+  background: radial-gradient(circle, rgba(227, 241, 225, 0.45), transparent 70%);
 }
 
 .topbar,
@@ -112,7 +115,7 @@ button {
 
 .topbar {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 42px;
+  margin-bottom: 34px;
 }
 
 .brand,
@@ -131,7 +134,7 @@ h2,
 }
 
 .brand {
-  font-size: 2rem;
+  font-size: 2.35rem;
   line-height: 1;
 }
 
@@ -142,21 +145,37 @@ h2,
   align-items: center;
   justify-content: center;
   min-height: 52px;
-  padding: 0 20px;
+  padding: 0 22px;
   border-radius: 999px;
-  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .ghost-button,
 .secondary-button {
   border: 1px solid var(--line);
-  background: rgba(255, 250, 242, 0.66);
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--text);
+  backdrop-filter: blur(10px);
 }
 
 .primary-button {
   background: var(--primary);
-  color: #fff8f4;
-  box-shadow: 0 14px 28px rgba(99, 69, 61, 0.22);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(48, 84, 65, 0.24);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.ghost-button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-button:hover {
+  background: var(--primary-strong);
 }
 
 .topbar > a {
@@ -164,12 +183,14 @@ h2,
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  gap: 48px;
+  flex: 1;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 56px;
+  align-items: center;
 }
 
 .hero-copy {
-  padding-top: 24px;
+  padding-top: 0;
   position: relative;
 }
 
@@ -177,8 +198,8 @@ h2,
   display: inline-block;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(161, 178, 159, 0.18);
-  color: var(--primary-strong);
+  background: rgba(48, 84, 65, 0.1);
+  color: var(--accent);
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -206,21 +227,32 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin: 28px 0 30px;
+  margin: 28px 0 24px;
 }
 
 .hero-highlights {
-  display: grid;
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
+.hero-highlights li {
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .hero-highlights li::before {
-  content: '•';
+  content: '✓';
   color: var(--primary);
-  margin-right: 10px;
+  margin-right: 8px;
+  font-weight: 700;
 }
 
 .hero-card,
@@ -230,7 +262,7 @@ h1 {
 .review-box,
 .faq-item {
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(26, 59, 26, 0.08);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
   transition:
@@ -247,17 +279,15 @@ h1 {
 .review-box:hover,
 .faq-item:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 30px 70px rgba(92, 70, 53, 0.18);
-  border-color: rgba(125, 90, 80, 0.24);
-  background: rgba(255, 252, 247, 0.92);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(48, 84, 65, 0.22);
+  background: rgba(255, 255, 255, 0.86);
 }
 
 .hero-card {
-  padding: 22px;
+  padding: 20px;
   border-radius: 36px;
-  background:
-    linear-gradient(180deg, rgba(255, 250, 244, 0.96), rgba(248, 239, 229, 0.88)),
-    var(--surface);
+  background: rgba(255, 255, 255, 0.74);
 }
 
 .photo-frame {
@@ -265,6 +295,7 @@ h1 {
   border-radius: 28px;
   aspect-ratio: 1 / 1;
   background: linear-gradient(180deg, rgba(255, 247, 238, 0.9), rgba(238, 226, 213, 0.9));
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .photo-frame img {
@@ -276,7 +307,7 @@ h1 {
 }
 
 .profile-note {
-  padding: 18px 8px 6px;
+  padding: 14px 8px 6px;
 }
 
 .note-title {
@@ -358,14 +389,12 @@ h2 {
 .carousel-card {
   text-align: center;
   padding: 52px 28px;
-  background:
-    linear-gradient(135deg, rgba(255, 249, 241, 0.94), rgba(242, 231, 220, 0.88)),
-    var(--surface);
+  background: rgba(255, 255, 255, 0.74);
 }
 
 .quote-mark {
   margin: 0;
-  color: rgba(125, 90, 80, 0.28);
+  color: rgba(48, 84, 65, 0.22);
   font-size: 5rem;
   line-height: 0.8;
 }
@@ -397,7 +426,7 @@ h2 {
   height: 14px;
   border: 0;
   border-radius: 999px;
-  background: rgba(125, 90, 80, 0.2);
+  background: rgba(48, 84, 65, 0.18);
   cursor: pointer;
 }
 
@@ -415,9 +444,10 @@ h2 {
   gap: 18px;
   padding: 32px;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 250, 244, 0.88), rgba(243, 235, 225, 0.8));
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(26, 59, 26, 0.08);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
 }
 
 .review-section {
@@ -428,9 +458,7 @@ h2 {
   grid-template-columns: minmax(0, 1fr) auto;
   padding: 30px;
   border-radius: 32px;
-  background:
-    linear-gradient(90deg, rgba(255, 250, 244, 0.95), rgba(243, 233, 220, 0.88)),
-    var(--surface);
+  background: rgba(255, 255, 255, 0.74);
 }
 
 .faq-list {
@@ -481,7 +509,33 @@ h2 {
   justify-self: end;
 }
 
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-block .eyebrow {
+  margin: 0 0 4px;
+}
+
+.brand-block .brand {
+  display: block;
+}
+
 @media (max-width: 960px) {
+  .hero {
+    min-height: auto;
+  }
+
   .hero-grid,
   .split-layout,
   .three-columns,
@@ -508,6 +562,18 @@ h2 {
     padding-top: 16px;
   }
 
+  .topbar {
+    margin-bottom: 28px;
+  }
+
+  .brand-logo {
+    width: 105px;
+  }
+
+  .brand {
+    font-size: 1.8rem;
+  }
+
   .hero-card,
   .info-card,
   .topic-card,
@@ -531,25 +597,4 @@ h2 {
   .quote-text {
     max-width: 100%;
   }
-}
-.brand-block {
-  display: flex;
-  align-items: center;
-  gap: 0px;
-}
-
-.brand-logo {
-  width: 120px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  flex-shrink: 0;
-}
-
-.brand-block .eyebrow {
-  margin: 0 0 4px;
-}
-
-.brand-block .brand {
-  display: block;
 }
