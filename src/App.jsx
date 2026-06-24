@@ -78,7 +78,7 @@ function App() {
         <nav className="topbar">
         <div className="brand-block">
   <img
-    src="/logoNova.png"
+    src="/LogoNova.png"
     alt="Logo Andreia Lucynara"
     className="brand-logo"
   />
