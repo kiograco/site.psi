@@ -18,6 +18,10 @@ const quotes = [
     text: 'Na terapia, o sofrimento não precisa ser enfrentado em solidão: ele pode ser olhado com o cuidado que cada história precisa.',
     author: 'Processo terapêutico' ,
   },
+  {
+    text: 'Isso de querer ser exatamente aquilo que a gente é ainda vai nos levar além',
+    author: ' Paulo Leminski' ,
+  },
 ];
 
 const helpTopics = [
