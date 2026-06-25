@@ -116,7 +116,7 @@ function App() {
           <div className="hero-card">
             <div className="photo-frame">
               <img
-                src="/andreia-lucynara.png"
+                src="/perfil.jpeg"
                 alt="Andreia Lucynara"
                 width="635"
                 height="637"
