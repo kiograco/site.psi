@@ -4,6 +4,7 @@ const whatsappUrl =
   'https://api.whatsapp.com/send?phone=558491340163&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20momento%20com%20a%20psic%C3%B3loga%20Andreia%20Lucynara.';
 const googleReviewsUrl =
   'https://www.google.com/search?q=Andreia+Lucynara+psic%C3%B3loga+avalia%C3%A7%C3%B5es';
+const instagramUrl = 'https://www.instagram.com/psi.andreialucynara/';
 
 const quotes = [
   {
@@ -122,6 +123,9 @@ function App() {
                 height="637"
               />
             </div>
+            <a className="instagram-link" href={instagramUrl} target="_blank" rel="noreferrer">
+              @psi.andreialucynara
+            </a>
             <div className="profile-note">
               <p className="note-title">Sobre mim</p>
               <p>A psicologia clínica faz parte do meu percurso profissional há cerca de 10 anos. Nesse período, muitas histórias foram acolhidas, desvelando possibilidades diversas de transformação, cuidado, autoconhecimento e abertura para autenticidade.</p>

@@ -302,8 +302,22 @@ h1 {
   display: block;
 }
 
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 14px 8px 0;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.instagram-link:hover {
+  color: var(--primary);
+}
+
 .profile-note {
-  padding: 14px 8px 6px;
+  padding: 10px 8px 6px;
 }
 
 .note-title {
